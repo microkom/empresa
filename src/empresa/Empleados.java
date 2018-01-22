@@ -11,7 +11,7 @@ package empresa;
  */
 abstract public class Empleados {
     
-    private final double PLUS=300;
+    public static final double PLUS=300;
     
     private String nombre;
     private Fecha fechaNac;

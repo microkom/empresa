@@ -1,6 +1,8 @@
 
 package empresa;
 
+import java.util.Calendar;
+
 
 public class Comercial extends Empleados{
     
@@ -10,15 +12,41 @@ public class Comercial extends Empleados{
         super(nombre, fechaNac, salario, plus);
         this.comision=comision;
     }
+    public boolean mayorDe(int edad){
+        Calendar cal = Calendar.getInstance();
+        boolean mayorDe=false;
+  
+        int anyo= cal.get(Calendar.YEAR);
+        int mes= cal.get(Calendar.MONTH)+1;
+        int dia= cal.get(Calendar.DAY_OF_MONTH);
+        
+        //EL MES DEL SISTEMA ME DA -1 MES **************************************************
+        
+        if (anyo-super.getFechaNac().getAnyo()>=edad) {
+            mayorDe=true;
+        }else if (anyo-super.getFechaNac().getAnyo()>=edad && mes>=super.getFechaNac().getMes()){
+            mayorDe=true;
+        }else if (anyo-super.getFechaNac().getAnyo()>=edad && mes>=super.getFechaNac().getMes() && dia>=super.getFechaNac().getDia()){
+            mayorDe=true;
+        }else{
+            mayorDe=false;
+        }
+        return mayorDe;
+    
+    }
+ 
+    public void plus (){
+        if ((mayorDe(30)==true) && (this.comision>200)){
+            super.setPlus(PLUS+super.getPlus());
+        }
+    }
     public String toString(){
+        plus();
         String texto=super.toString();
-        texto+="\tComisión: "+this.comision;
+        texto+="\tComisión: "+this.comision+"\n";
         return texto;
     }
     
-    public void plus (){
-        if (super.getFechaNac())
-    }
     /*
     Las clases tendrán un método llamado plus, que según en cada clase
 tendrá una implementación distnta. Este plus básicamente aumenta el
