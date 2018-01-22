@@ -35,6 +35,8 @@ abstract public class Empleados {
     public void setSalario(double salario){this.salario=salario;}
     public void setPlus(double plus){this.plus=plus;}
     
+    
+    
     public String toString(){
         String texto="";
         texto="\tNombre: "+this.nombre+"\n"+

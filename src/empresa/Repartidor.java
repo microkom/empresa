@@ -39,13 +39,17 @@ public class Repartidor extends Empleados {
         }
         return menorDe;
     }
-    public void plus (){
-        if ((menorDe(25)==true) && (this.zona.equals("3"))){
-            super.setPlus(PLUS+super.getPlus());
-        }
+    public boolean plus (){
+        boolean ok=false;
+        if ((menorDe(25)==true) && (this.zona.equals("3"))) ok=true;
+        return ok;
+    }
+    public void addPlus(){
+        if (plus())
+        super.setPlus(PLUS+super.getPlus());
     }
     public String toString(){
-        plus();
+        addPlus();
         String texto=super.toString();
         texto+="\tZona: "+this.zona+"\n";
         return texto;

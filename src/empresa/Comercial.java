@@ -34,14 +34,17 @@ public class Comercial extends Empleados{
         return mayorDe;
     
     }
- 
-    public void plus (){
-        if ((mayorDe(30)==true) && (this.comision>200)){
-            super.setPlus(PLUS+super.getPlus());
-        }
+    public boolean plus (){
+        boolean ok=false;
+        if ((mayorDe(30)==true) && (this.comision>200)) ok=true;
+        return ok;
+    }
+    public void addPlus(){
+        if (plus())
+        super.setPlus(PLUS+super.getPlus());
     }
     public String toString(){
-        plus();
+        addPlus();
         String texto=super.toString();
         texto+="\tComisión: "+this.comision+"\n";
         return texto;
