@@ -21,10 +21,9 @@ public class Comercial extends Empleados{
         int dia= cal.get(Calendar.DAY_OF_MONTH);
         
         //EL MES DEL SISTEMA ME DA -1 MES **************************************************
-        
-        if (anyo-super.getFechaNac().getAnyo()>=edad) {
-            mayorDe=true;
-        }else if (anyo-super.getFechaNac().getAnyo()>=edad && mes>=super.getFechaNac().getMes()){
+        //23, 2, 2000       18
+        //22, 1, 2018
+        if (anyo-super.getFechaNac().getAnyo()-1>=edad) {
             mayorDe=true;
         }else if (anyo-super.getFechaNac().getAnyo()>=edad && mes>=super.getFechaNac().getMes() && dia>=super.getFechaNac().getDia()){
             mayorDe=true;

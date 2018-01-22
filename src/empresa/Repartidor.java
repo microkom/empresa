@@ -28,9 +28,7 @@ public class Repartidor extends Empleados {
         int mesSys= cal.get(Calendar.MONTH)+1;
         int diaSys= cal.get(Calendar.DAY_OF_MONTH);
         //EL MES DEL SISTEMA ME DA -1 MES **************************************************
-        if (anyoSys-super.getFechaNac().getAnyo()<=edad) {
-            menorDe=true;
-        }else if (anyoSys-super.getFechaNac().getAnyo()<=edad && mesSys<=super.getFechaNac().getMes()){
+        if (anyoSys-super.getFechaNac().getAnyo()+1<=edad) {
             menorDe=true;
         }else if (anyoSys-super.getFechaNac().getAnyo()<=edad && mesSys<=super.getFechaNac().getMes() && diaSys<=super.getFechaNac().getDia()){
             menorDe=true;
