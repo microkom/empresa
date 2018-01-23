@@ -32,15 +32,20 @@ public class Comercial extends Empleados{
         return mayorDe;
     
     }
+    
+    //comprobacion para saber si se da la condicion para dar comision
     public boolean plus (){
         boolean ok=false;
         if ((mayorDe(30)==true) && (this.comision>200)) ok=true;
         return ok;
     }
+    
+    //agregar el plus a la comision del empleado
     public void addPlus(){
         if (plus())
         super.setPlus(PLUS+super.getPlus());
     }
+    
     public String toString(){
         addPlus();
         String texto=super.toString();

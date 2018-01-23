@@ -35,7 +35,7 @@ información de cada uno de ellos
         worker[1] = new Repartidor("David", new Fecha(28, 6, 1983), 1200, 988, "3");
         worker[2] = new Repartidor("Adrian", new Fecha(15, 3, 1998), 1060, 121, "3");
         worker[3] = new Repartidor("Jaime", new Fecha(13, 8, 1986), 900, 55, "3");
-        worker[4] = new Repartidor("Carlos", new Fecha(24, 1, 1999), 2100, 70, "3");
+        worker[4] = new Repartidor("Carlos", new Fecha(23, 1, 1993), 2100, 70, "3");
         worker[5] = new Comercial("Jose", new Fecha(18, 2, 1979), 500, 300, 544);
         worker[6] = new Comercial("Juanjo", new Fecha(1, 11, 1988), 1100, 300, 544);
         worker[7] = new Comercial("Luis", new Fecha(23, 7, 1999), 1011, 277, 544);

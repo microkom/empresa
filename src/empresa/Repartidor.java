@@ -22,18 +22,18 @@ public class Repartidor extends Empleados {
     
     public boolean menorDe(int edad){
         Calendar cal = Calendar.getInstance();
-        boolean menorDe=false;
+        boolean menorDe=true;
   
         int anyoSys= cal.get(Calendar.YEAR);
         int mesSys= cal.get(Calendar.MONTH)+1;
         int diaSys= cal.get(Calendar.DAY_OF_MONTH);
         //EL MES DEL SISTEMA ME DA -1 MES **************************************************
-        if (anyoSys-super.getFechaNac().getAnyo()+1<=edad) {
-            menorDe=true;
-        }else if (anyoSys-super.getFechaNac().getAnyo()<=edad && mesSys<=super.getFechaNac().getMes() && diaSys<=super.getFechaNac().getDia()){
-            menorDe=true;
-        }else{
+        if (anyoSys-super.getFechaNac().getAnyo()>edad) {
             menorDe=false;
+        }else if (anyoSys-super.getFechaNac().getAnyo()==edad && super.getFechaNac().getMes()>=mesSys && super.getFechaNac().getDia()>=diaSys){
+            menorDe=false;
+        }else{
+            menorDe=true;
         }
         return menorDe;
     }
