@@ -40,7 +40,7 @@ información de cada uno de ellos
         worker[6] = new Comercial("Juanjo", new Fecha(1, 11, 1988), 1100, 300, 544);
         worker[7] = new Comercial("Luis", new Fecha(23, 7, 1999), 1011, 277, 544);
         worker[8] = new Comercial("Pedro", new Fecha(4, 4, 1973), 2000, 166, 544);
-        worker[9] = new Comercial("Jane", new Fecha(22, 2, 1988), 6000, 655, 544);
+        worker[9] = new Comercial("Jane", new Fecha(23, 1, 1988), 6000, 655, 544);
 
         Empleados empleadoMayor = null;
         Empleados empleadoMenor = null;

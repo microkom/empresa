@@ -14,21 +14,20 @@ public class Comercial extends Empleados{
     }
     public boolean mayorDe(int edad){
         Calendar cal = Calendar.getInstance();
-        boolean mayorDe=false;
+        boolean mayorDe=true;
   
         int anyo= cal.get(Calendar.YEAR);
         int mes= cal.get(Calendar.MONTH)+1;
         int dia= cal.get(Calendar.DAY_OF_MONTH);
         
         //EL MES DEL SISTEMA ME DA -1 MES **************************************************
-        //23, 2, 2000       18
-        //22, 1, 2018
-        if (anyo-super.getFechaNac().getAnyo()-1>=edad) {
-            mayorDe=true;
-        }else if (anyo-super.getFechaNac().getAnyo()>=edad && mes>=super.getFechaNac().getMes() && dia>=super.getFechaNac().getDia()){
-            mayorDe=true;
-        }else{
+     
+        if (anyo-super.getFechaNac().getAnyo()<edad) {
             mayorDe=false;
+        }else if (anyo-super.getFechaNac().getAnyo()==edad && super.getFechaNac().getMes()<=mes && super.getFechaNac().getDia()<dia){
+            mayorDe=false;
+        }else{
+            mayorDe=true;
         }
         return mayorDe;
     
